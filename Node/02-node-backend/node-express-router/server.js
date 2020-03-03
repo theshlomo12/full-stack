@@ -1,25 +1,18 @@
 const express = require('express');
 
-
-
 const app = express();
-
-
-
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello</h1>')
 })
 
-const userRouter = require('./routes/users');
-app.use("/users", userRouter);
-
-
-
+const usersss = require('./routes/users');
+app.use("/users", usersss);
 
 app.get('/angularRxTest', (req, res) => {
     res.send(HEREOS)
 })
+
 // app.use(express.static('public'));
 
 let port = process.env.PORT || 3100;
